@@ -43,27 +43,38 @@ if ( ! function_exists( 'susty_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'susty' ),
-		) );
+		register_nav_menus(
+			array(
+				'menu-1' => esc_html__( 'Primary', 'susty' ),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'susty_custom_background_args', array(
-			'default-color' => 'fffefc',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'susty_custom_background_args',
+				array(
+					'default-color' => 'fffefc',
+					'default-image' => '',
+				)
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -73,12 +84,15 @@ if ( ! function_exists( 'susty_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 250,
+				'width'       => 250,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
 	}
 endif;
 add_action( 'after_setup_theme', 'susty_setup' );
@@ -151,12 +165,15 @@ function susty_register_query_var( $vars ) {
 
 add_filter( 'query_vars', 'susty_register_query_var' );
 
-add_filter( 'template_include', function( $path ) {
-	if ( get_query_var( 'menu' ) ) {
-		return get_template_directory() . '/menu.php';
+add_filter(
+	'template_include',
+	function( $path ) {
+		if ( get_query_var( 'menu' ) ) {
+			return get_template_directory() . '/menu.php';
+		}
+		return $path;
 	}
-	return $path;
-});
+);
 
 // Remove dashicons in frontend for unauthenticated users
 add_action( 'wp_enqueue_scripts', 'susty_dequeue_dashicons' );
@@ -165,3 +182,10 @@ function susty_dequeue_dashicons() {
 		wp_deregister_style( 'dashicons' );
 	}
 }
+
+// Remove Gutenberg style
+function susty_remove_wp_block_library_css() {
+	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'wp-block-library-theme' );
+}
+add_action( 'wp_enqueue_scripts', 'susty_remove_wp_block_library_css' );
