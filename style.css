@@ -111,6 +111,7 @@ pre {
 
 a {
 	background-color: transparent;
+	transition: .5s all;
 }
 
 /**
@@ -799,6 +800,14 @@ object {
 
 .site-description {
 	margin: 0 0 10px 0;
+}
+
+#masthead a {
+	transition: none;
+}
+
+a.custom-logo-link:hover {
+	border: none;
 }
 
 /*--------------------------------------------------------------
