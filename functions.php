@@ -151,30 +151,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
-function susty_nav_rewrite_rule() {
-	add_rewrite_rule( 'menu', 'index.php?menu=true', 'top' );
-}
-
-add_action( 'init', 'susty_nav_rewrite_rule' );
-
-function susty_register_query_var( $vars ) {
-	$vars[] = 'menu';
-
-	return $vars;
-}
-
-add_filter( 'query_vars', 'susty_register_query_var' );
-
-add_filter(
-	'template_include',
-	function( $path ) {
-		if ( get_query_var( 'menu' ) ) {
-			return get_template_directory() . '/menu.php';
-		}
-		return $path;
-	}
-);
-
 // Remove dashicons in frontend for unauthenticated users
 add_action( 'wp_enqueue_scripts', 'susty_dequeue_dashicons' );
 function susty_dequeue_dashicons() {
