@@ -119,10 +119,6 @@ function susty_scripts() {
 	wp_enqueue_style( 'susty-style', get_stylesheet_uri() );
 
 	wp_deregister_script( 'wp-embed' );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'susty_scripts' );
 
