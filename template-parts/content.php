@@ -23,17 +23,17 @@
 			</div><!-- .entry-meta -->
 			<?php
 		endif;
-		the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		the_title( '<h1>', '</h1>' );
 		susty_wp_post_category();
 		the_excerpt();
-        if ( ! is_archive() ) {
-            get_template_part('entry-parts/breadcrumb');
-        }
+		if ( ! is_archive() ) {
+			get_template_part( 'entry-parts/breadcrumb' );
+		}
 		?>
 		</div>
 	</header>
 
-	<div id="content">
+	<div id="content" class="post-inner">
 		<?php
 		if ( ! is_archive() ) {
 			the_content(
