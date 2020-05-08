@@ -927,8 +927,8 @@ article header h2 {
 @media (min-width: 782px) {
 	article header h1,
 	article header h2 {
-		font-size: 42px;
-		line-height: 58px;
+		font-size: 36px;
+		line-height: 42px;
 	}
 }
 
@@ -984,6 +984,7 @@ footer#colophon {
 	max-width: 99em;
 	margin: 3em auto;
 	padding: 0 1em;
+	font-size: .85em;
 }
 
 .copyright {
