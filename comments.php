@@ -22,6 +22,8 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area">
 
+	<div class="contentable">
+
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
@@ -73,5 +75,7 @@ if ( post_password_required() ) {
 
 	comment_form( array( 'format' => 'html4' ) );
 	?>
+
+	</div><!-- .contentable -->
 
 </div><!-- #comments -->

@@ -111,7 +111,6 @@ pre {
 
 a {
 	background-color: transparent;
-	transition: .5s all;
 }
 
 /**
@@ -523,11 +522,10 @@ input[type="submit"] {
 	color: #1d1d1d;
 	background-color: #feecde;
 	border-radius: 3px;
-	font-size: 12px;
+	font-size: 15px;
 	line-height: 1;
 	padding: 1em 1.5em;
 	font-weight: 900;
-	transition: .5s all;
 }
 
 button:hover,
@@ -557,8 +555,8 @@ textarea {
 	color: #1d1d1d;
 	border: 1px solid #bbb;
 	border-radius: 5px;
-	padding: 3px;
-	transition: .5s all;
+	padding: 10px;
+	width: 100%;
 }
 
 input[type="text"]:focus,
@@ -735,6 +733,30 @@ a:hover, a:active {
 	word-wrap: break-word;
 }
 
+.form-submit {
+	text-align: center;
+}
+
+#comments {
+	background-color: #f8f8f8;
+	padding: 2em 0;
+	margin-top: 2em;
+}
+
+#comments label {
+	display: block;
+}
+
+#comments [type="checkbox"] + label {
+	display: inline;
+}
+
+#reply-title {
+	font-family: "Noto Serif", serif;
+	font-size: 2em;
+	margin-bottom: .5em;
+}
+
 .bypostauthor {
 	display: block;
 }
@@ -791,10 +813,6 @@ object {
 
 .site-description {
 	margin: 0 0 10px 0;
-}
-
-#masthead a {
-	transition: none;
 }
 
 a.custom-logo-link:hover {
