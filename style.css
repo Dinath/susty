@@ -912,7 +912,7 @@ article header h2 {
 }
 
 footer#colophon {
-	max-width: 69em;
+	max-width: 99em;
 	margin: 3em auto;
 	text-align: center;
 	padding: 0 1em;
@@ -922,7 +922,6 @@ footer#colophon {
 .copyright {
 	text-align: center;
 }
-
 
 .wp-block-columns {
 	display: flex;
