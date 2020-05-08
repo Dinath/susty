@@ -468,7 +468,6 @@ html {
 
 body {
 	background-color: #fffefc;
-	border-top: 0.4rem solid;
 }
 
 hr {
@@ -520,32 +519,23 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
+	border: none;
+	color: #1d1d1d;
+	background-color: #feecde;
 	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
 	font-size: 12px;
-	font-size: 0.75rem;
 	line-height: 1;
-	padding: .6em 1em .4em;
+	padding: 1em 1.5em;
+	font-weight: 900;
+	transition: .5s all;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-}
-
-button:active, button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-	border-color: #feecde;
+	opacity: .8;
+	cursor: pointer;
 }
 
 input[type="text"],
@@ -568,6 +558,7 @@ textarea {
 	border: 1px solid #bbb;
 	border-radius: 5px;
 	padding: 3px;
+	transition: .5s all;
 }
 
 input[type="text"]:focus,
@@ -586,7 +577,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #111;
+	outline-color: #feecde;
 }
 
 select {
@@ -769,7 +760,7 @@ object {
 }
 
 #masthead nav {
-	background-color: #eee;
+	background-color: #feecde;
 	overflow: auto;
 	white-space: nowrap;
 }
@@ -815,7 +806,7 @@ a.custom-logo-link:hover {
 --------------------------------------------------------------*/
 .contentable,
 #content {
-	max-width: 40em;
+	max-width: 50em;
 	margin: 0 auto;
 	padding: 0 2em;
 }
@@ -870,6 +861,25 @@ article header h2 {
 .cat-links a, .comments-link a, .edit-link a {
 	padding: 0 .5em;
 	margin: 0 .5em 0 0;
+}
+
+.single article {
+	padding: 0;
+}
+
+.single article > header {
+	background-color: #1d1d1d;
+	padding: 5em 0 3em 0;
+	margin-bottom: 2em;
+	border-bottom: .3em solid #b1423b;
+}
+.single article > header .post-cat {
+	background-color: #eee;
+	color: #1d1d1d;
+}
+
+.single article > header * {
+	color: #eee;
 }
 
 footer#colophon {

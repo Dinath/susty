@@ -10,28 +10,30 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1>', '</h1>' );
-		else :
-			the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 
+	<header>
+		<div class="contentable">
+		<?php
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
 				<?php
 				susty_wp_posted_on();
-				susty_wp_posted_by();
 				?>
 			</div><!-- .entry-meta -->
-		<?php endif; ?>
+			<?php
+		endif;
+		the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		susty_wp_post_category();
+		the_excerpt();
+		get_template_part( 'entry-parts/breadcrumb' );
+		?>
+		</div>
 	</header>
 
 	<?php susty_wp_post_thumbnail(); ?>
 
-	<div>
+	<div id="content">
 		<?php
 		the_content(
 			sprintf(
@@ -57,7 +59,7 @@
 		?>
 	</div>
 
-	<footer>
+	<footer class="contentable">
 		<?php susty_wp_entry_footer(); ?>
 	</footer>
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -68,8 +68,4 @@
 		?>
 	</header>
 
-	<div
-	<?php
-	if ( ! is_front_page() && ! is_home() ) :
-		?>
-		 id="content"<?php endif ?>>
+	<div id="main-content">
