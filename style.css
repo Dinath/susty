@@ -576,6 +576,7 @@ figcaption {
 	font-size: .9em;
 	font-style: italic;
 	color: #9e9e9e;
+	word-break: break-word;
 }
 
 table {
@@ -919,17 +920,9 @@ a.custom-logo-link:hover {
 
 article header h1,
 article header h2 {
-	font-weight: 900;
-	font-size: 2.5em;
+	font-size: 36px;
+	line-height: 42px;
 	margin: 0 0 .2em 0;
-}
-
-@media (min-width: 782px) {
-	article header h1,
-	article header h2 {
-		font-size: 36px;
-		line-height: 42px;
-	}
 }
 
 .post-cat {
