@@ -14,8 +14,6 @@
 		<?php the_title( '<h1>', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php susty_wp_post_thumbnail(); ?>
-
 	<div>
 		<?php
 		the_content();

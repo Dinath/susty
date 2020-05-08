@@ -16,7 +16,7 @@ get_header();
 ?>
 
 	<div id="primary">
-		<main id="main">
+		<main id="main" class="contentable">
 
 		<?php
 		while ( have_posts() ) :

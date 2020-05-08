@@ -161,3 +161,29 @@ function susty_remove_wp_block_library_css() {
 	wp_dequeue_style( 'wp-block-library-theme' );
 }
 add_action( 'wp_enqueue_scripts', 'susty_remove_wp_block_library_css' );
+
+function susty_sidebar_registration() {
+
+	// Arguments used in all register_sidebar() calls.
+	$shared_args = array(
+		'before_title'  => '<p>',
+		'after_title'   => '</p>',
+		'before_widget' => '<div class="%2$s">',
+		'after_widget'  => '</div>',
+	);
+
+	for ( $i = 1; $i <= 3; $i ++ ) {
+		register_sidebar(
+			array_merge(
+				$shared_args,
+				array(
+					'name'        => __( 'Footer', 'susty' ) . " $i",
+					'id'          => 'sidebar-footer-' . $i,
+					'description' => __( 'Widgets in this area will be displayed in columns.', 'susty' ),
+				)
+			)
+		);
+	}
+}
+
+add_action( 'widgets_init', 'susty_sidebar_registration' );

@@ -17,13 +17,10 @@
 		<div class="entry-meta">
 			<?php
 			susty_wp_posted_on();
-			susty_wp_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header>
-
-	<?php susty_wp_post_thumbnail(); ?>
 
 	<div>
 		<?php the_excerpt(); ?>

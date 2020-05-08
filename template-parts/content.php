@@ -31,8 +31,6 @@
 		</div>
 	</header>
 
-	<?php susty_wp_post_thumbnail(); ?>
-
 	<div id="content">
 		<?php
 		the_content(
