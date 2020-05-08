@@ -410,23 +410,48 @@ h1, h2, h3, h4, h5, h6 {
 .post-inner h4,
 .post-inner h5,
 .post-inner h6 {
-	width: 80%;
 	line-height: 1.4;
 }
+
+@media (min-width: 782px) {
+	.post-inner h2,
+	.post-inner h3,
+	.post-inner h4,
+	.post-inner h5,
+	.post-inner h6 {
+		width: 80%;
+	}
+}
+
 .post-inner h2 {
-	font-size: 2em;
-}
-
-.post-inner h3 {
-	font-size: 1.8em;
-}
-
-.post-inner h4 {
 	font-size: 1.6em;
 }
 
+.post-inner h3 {
+	font-size: 1.5em;
+}
+
+.post-inner h4 {
+	font-size: 1.4em;
+}
+
+@media (min-width: 782px) {
+	.post-inner h2 {
+		font-size: 2em;
+	}
+	.post-inner h3 {
+		font-size: 1.8em;
+	}
+
+	.post-inner h4 {
+		font-size: 1.6em;
+	}
+}
+
+
 .post-inner {
-	line-height: 2;
+	line-height: 28px;
+	font-size: 17px;
 }
 
 p {
@@ -437,20 +462,23 @@ dfn, cite, em, i {
 	font-style: italic;
 }
 
+pre,
 blockquote {
 	font-size: 24px;
 	line-height: 36px;
 	color: #9e9e9e;
-	margin: 2em 1em;
+	margin: 2em .5em;
 	padding-bottom: 1em;
 	font-family: "Noto Serif", serif;
 	position: relative;
+	white-space: normal;
 }
 
 blockquote p {
 	margin-bottom: 0;
 }
 
+pre::after,
 blockquote::after {
 	position: absolute;
 	content: "";
@@ -463,18 +491,6 @@ blockquote::after {
 
 address {
 	margin: 0 0 1.5em;
-}
-
-pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
 }
 
 code, kbd, tt, var {
@@ -523,6 +539,11 @@ hr {
 
 ul {
 	list-style: disc;
+	margin-bottom: 1.5em;
+}
+
+ul {
+	padding-left: 1.5em;
 }
 
 ol {
@@ -668,41 +689,26 @@ label::after {
 	background-color: #feecde;
 }
 
-.post-inner p {
-
-}
-
-.post-inner a {
-	color: #3d7e9a;
-}
-
 .post-inner h2::after {
 	top: -1em;
 	left: -1em;
 	bottom: unset;
 }
 
+.post-inner a {
+	text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 # Links
 --------------------------------------------------------------*/
 a {
-	color: rgb(4, 4, 2);
+	color: #1d1d1d;
 	text-decoration: none;
-	border-bottom: 0.2em solid transparent;
 }
 
 a#susty-back-link {
 	padding: .3em .6em;
-}
-
-a:visited {
-	color: rgb(4, 4, 2);
-}
-
-a:hover, a:focus, a:active {
-	/*color: midnightblue;*/
-	border-bottom-style: solid;
-	border-bottom-color: inherit;
 }
 
 a:focus {
@@ -948,10 +954,17 @@ a.custom-logo-link:hover {
 
 article header h1,
 article header h2 {
-	font-size: 42px;
-	line-height: 58px;
 	font-weight: 900;
+	font-size: 2.5em;
 	margin: 0 0 .2em 0;
+}
+
+@media (min-width: 782px) {
+	article header h1,
+	article header h2 {
+		font-size: 42px;
+		line-height: 58px;
+	}
 }
 
 .entry-meta {
