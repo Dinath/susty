@@ -496,7 +496,6 @@ address {
 code, kbd, tt, var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
-	font-size: 0.9375rem;
 }
 
 abbr, acronym {
@@ -745,7 +744,6 @@ a:hover, a:active {
 	color: #21759b;
 	display: block;
 	font-size: 14px;
-	font-size: 0.875rem;
 	font-weight: bold;
 	height: auto;
 	left: 5px;
@@ -779,40 +777,7 @@ a:hover, a:active {
 }
 
 .aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 	text-align: center;
-}
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: "";
-	display: table;
-	table-layout: fixed;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-	clear: both;
 }
 
 /*--------------------------------------------------------------
@@ -944,11 +909,11 @@ a.custom-logo-link:hover {
 }
 
 #primary article:nth-child(even) * {
-	color: #eee;
+	color: #f8f8f8;
 }
 
 #primary article:nth-child(even) .post-cat {
-	background-color: #eee;
+	background-color: #f8f8f8;
 	color: #1d1d1d;
 }
 
@@ -967,17 +932,9 @@ article header h2 {
 	}
 }
 
-.entry-meta {
-	color: rgb(179, 179, 179);
-}
-
-.entry-meta a {
-	color: rgb(179, 179, 179);
-}
-
 .post-cat {
 	background-color: #1d1d1d;
-	color: #eee;
+	color: #f8f8f8;
 	padding: .3em .6em;
 	margin-left: .1em;
 }
@@ -1015,19 +972,18 @@ article header h2 {
 	border-bottom: .3em solid #b1423b;
 }
 .single article > header .post-cat {
-	background-color: #eee;
+	background-color: #f8f8f8;
 	color: #1d1d1d;
 }
 
 .single article > header * {
-	color: #eee;
+	color: #f8f8f8;
 }
 
 footer#colophon {
 	max-width: 99em;
 	margin: 3em auto;
 	padding: 0 1em;
-	font-size: .75em;
 }
 
 .copyright {
