@@ -395,7 +395,7 @@ optgroup,
 textarea {
 	color: rgb(4, 4, 2);
 	font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
-	font-size: calc( 15px + 4 * (100vw / 1500));
+	font-size: 16px;
 	line-height: 1.5;
 }
 
@@ -504,6 +504,7 @@ img {
 
 figure {
 	margin: 1em 0;
+	max-width: 100%;
 }
 
 table {
@@ -543,7 +544,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+	border-color: #feecde;
 }
 
 input[type="text"],
@@ -562,9 +563,9 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+	color: #1d1d1d;
+	border: 1px solid #bbb;
+	border-radius: 5px;
 	padding: 3px;
 }
 
@@ -588,11 +589,30 @@ textarea:focus {
 }
 
 select {
-	border: 1px solid #ccc;
+	border: 1px solid #feecde;
 }
 
 textarea {
 	width: 100%;
+}
+
+label {
+	font-weight: 900;
+	position: relative;
+	margin-bottom: .5em;
+	display: inline-block;
+}
+
+label::after {
+	z-index: -10;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	content: '';
+	display: inline-block;
+	width: 2em;
+	height: .5em;
+	background-color: #feecde;
 }
 
 /*--------------------------------------------------------------
@@ -770,6 +790,15 @@ object {
 
 #masthead nav ul li:last-child {
 	margin-right: 2em;
+}
+
+.site-title {
+	font-size: 2em;
+	margin: 10px 0;
+}
+
+.site-description {
+	margin: 0 0 10px 0;
 }
 
 /*--------------------------------------------------------------

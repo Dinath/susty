@@ -27,16 +27,28 @@
 		<?php
 		if ( is_front_page() && is_home() ) :
 			?>
-			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php the_custom_logo(); ?></a></h1>
+			<h1 class="site-title">
+				<?php
+				has_custom_logo() ?
+					the_custom_logo() :
+					sprintf( '<a href="%s" rel="home">%s</a>', home_url( '/' ), get_bloginfo( 'name' ) );
+				?>
+			</h1>
 			<?php
 		else :
 			?>
-			<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php the_custom_logo(); ?></a></p>
+			<p class="site-title">
+				<?php
+				has_custom_logo() ?
+					the_custom_logo() :
+					sprintf( '<a href="%s" rel="home">%s</a>', home_url( '/' ), get_bloginfo( 'name' ) );
+				?>
+			</p>
 			<?php
 		endif;
 		?>
 
-		<p><?php echo bloginfo( 'description' ); ?></p>
+		<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
 
 		<?php
 		if ( has_nav_menu( 'menu-1' ) ) :
