@@ -26,27 +26,31 @@
 		the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		susty_wp_post_category();
 		the_excerpt();
-		get_template_part( 'entry-parts/breadcrumb' );
+        if ( ! is_archive() ) {
+            get_template_part('entry-parts/breadcrumb');
+        }
 		?>
 		</div>
 	</header>
 
 	<div id="content">
 		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'susty' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			)
-		);
+		if ( ! is_archive() ) {
+			the_content(
+				sprintf(
+					wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'susty' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					get_the_title()
+				)
+			);
+		}
 
 		wp_link_pages(
 			array(

@@ -13,7 +13,7 @@ get_header();
 	<div id="primary">
 		<main id="main">
 
-			<section>
+			<section class="contentable">
 				<header>
 					<h1><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'susty' ); ?></h1>
 				</header><!-- .page-header -->
@@ -43,10 +43,6 @@ get_header();
 					</div><!-- .widget -->
 
 					<?php
-					/* translators: %1$s: smiley */
-					$susty_wp_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'susty' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$susty_wp_archive_content" );
-
 					the_widget( 'WP_Widget_Tag_Cloud' );
 					?>
 
