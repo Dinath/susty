@@ -430,11 +430,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .post-inner h3 {
-	font-size: 1.5em;
+	font-size: 1.4em;
+	margin-top: 2em;
 }
 
 .post-inner h4 {
-	font-size: 1.4em;
+	font-size: 1.2em;
 }
 
 @media (min-width: 782px) {
@@ -499,7 +500,7 @@ blockquote {
 }
 
 blockquote cite {
-	color: #1d1d1d;
+	color: #000;
 	font-size: 0.8em;
 	margin-top: 1em;
 	display: block;
@@ -687,7 +688,6 @@ label {
 	display: inline-block;
 }
 
-.post-inner h3,
 .post-inner h2 {
 	position: relative;
 	margin-top: 3em;
@@ -923,7 +923,7 @@ a.custom-logo-link:hover {
 
 article header h1,
 article header h2 {
-	font-size: 36px;
+	font-size: 28px;
 	line-height: 42px;
 	margin: 0 0 .2em 0;
 }
