@@ -412,6 +412,7 @@ h1, h2, h3, h4, h5, h6 {
 .post-inner h5,
 .post-inner h6 {
 	line-height: 1.4;
+	font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
 }
 
 @media (min-width: 782px) {
@@ -438,26 +439,21 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 782px) {
 	.post-inner h2 {
-		font-size: 2em;
-	}
-	.post-inner h3 {
 		font-size: 1.8em;
 	}
-
+	.post-inner h3 {
+		font-size: 1.5em;
+	}
 	.post-inner h4 {
-		font-size: 1.6em;
+		font-size: 1.3em;
 	}
 }
 
 .post-inner {
-	line-height: 28px;
+	line-height: 32px;
 	font-size: 18px;
-}
-
-@media (min-width: 782px) {
-	.post-inner {
-		font-size: 17px;
-	}
+	letter-spacing: -0.003em;
+	font-family: "Noto Serif", serif;
 }
 
 p {
@@ -496,10 +492,10 @@ blockquote p {
 blockquote {
 	font-family: "Noto Serif", serif;
 	font-style: italic;
-	color: #9e9e9e;
-	border-left: 2px solid #9e9e9e;
+	color: #4d4d4d;
+	box-shadow: rgba(0, 0, 0, 0.84) 3px 0px 0px 0px inset;
 	padding-left: 1em;
-	margin: 3em 0;
+	margin: 2em 0;
 }
 
 blockquote cite {
@@ -582,6 +578,7 @@ dd {
 	margin: 0 1.5em 1.5em;
 }
 
+video,
 img {
 	height: auto;
 	max-width: 100%;
@@ -690,6 +687,7 @@ label {
 	display: inline-block;
 }
 
+.post-inner h3,
 .post-inner h2 {
 	position: relative;
 	margin-top: 3em;
@@ -708,12 +706,7 @@ label::after {
 	background-color: #feecde;
 }
 
-.post-inner h2::after {
-	top: -1em;
-	left: -1em;
-	bottom: unset;
-}
-
+.breadcrumbs a,
 .post-inner a {
 	text-decoration: underline;
 }
@@ -915,7 +908,7 @@ a.custom-logo-link:hover {
 --------------------------------------------------------------*/
 .contentable,
 #content {
-	max-width: 50em;
+	max-width: 40em;
 	margin: 0 auto;
 	padding: 0 2em;
 }
@@ -925,16 +918,7 @@ a.custom-logo-link:hover {
 }
 
 #primary article:nth-child(even) {
-	background-color: #1d1d1d;
-}
-
-#primary article:nth-child(even) * {
-	color: #f8f8f8;
-}
-
-#primary article:nth-child(even) .post-cat {
 	background-color: #f8f8f8;
-	color: #1d1d1d;
 }
 
 article header h1,
@@ -947,9 +931,9 @@ article header h2 {
 .post-cat {
 	background-color: #1d1d1d;
 	color: #f8f8f8;
-	padding: .3em .7em;
-	margin-left: .1em;
-	margin-top: .5em;
+	padding: .2em .7em;
+	font-size: 13px;
+	margin: .5em 0;
 	display: inline-block;
 }
 
@@ -980,18 +964,10 @@ article header h2 {
 }
 
 .single article > header {
-	background-color: #1d1d1d;
+	box-sizing: content-box;
+	background-color: #f8f8f8;
 	padding: 5em 0 3em 0;
 	margin-bottom: 2em;
-	border-bottom: .3em solid #b1423b;
-}
-.single article > header .post-cat {
-	background-color: #f8f8f8;
-	color: #1d1d1d;
-}
-
-.single article > header * {
-	color: #f8f8f8;
 }
 
 footer#colophon {
