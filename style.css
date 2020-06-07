@@ -609,7 +609,7 @@ em {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
+button, .button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -623,7 +623,7 @@ input[type="submit"] {
 	font-weight: 900;
 }
 
-button:hover,
+button:hover, .button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
@@ -989,4 +989,22 @@ footer#colophon {
 
 .wp-block-column {
 	padding: 1em 2em;
+}
+
+.pagination {
+	padding: 1rem;
+}
+
+.pagination .current {
+	color: #1d1d1d;
+	background-color: #feecde;
+}
+
+.pagination .page-numbers {
+	padding: 0 .5rem;
+}
+
+.pagination .prev,
+.pagination .next {
+	font-weight: bold;
 }
