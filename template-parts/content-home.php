@@ -15,7 +15,7 @@
 
 		<header>
 			<?php the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
-            <?php susty_wp_post_category(); ?>
+			<?php susty_wp_post_category(); ?>
 		</header><!-- .entry-header -->
 
 		<div>

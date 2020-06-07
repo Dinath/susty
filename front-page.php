@@ -13,7 +13,15 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
-			get_template_part( 'template-parts/content', 'home' );
+			if ( ! is_front_page() && is_home() ) :
+				get_template_part( 'template-parts/content', 'home' );
+			else :
+				?>
+				<div class="contentable">
+					<?php the_content(); ?>
+				</div>
+				<?php
+			endif;
 		endwhile;
 		?>
 		<?php
@@ -24,7 +32,7 @@ get_header();
 			</div>
 			<?php
 		else :
-            get_template_part('template-parts/pagination');
+			get_template_part( 'template-parts/pagination' );
 		endif;
 		?>
 	</main><!-- #main -->
