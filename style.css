@@ -452,7 +452,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .post-inner {
 	line-height: 32px;
-	font-size: 18px;
+	font-size: 20px;
 	letter-spacing: -0.003em;
 	font-family: "Noto Serif", serif;
 }
@@ -729,7 +729,7 @@ label::after {
 # Links
 --------------------------------------------------------------*/
 a {
-	color: #3d7e9a;
+	color: #1d1d1d;
 	text-decoration: none;
 }
 
@@ -886,10 +886,6 @@ object {
 	white-space: nowrap;
 }
 
-#masthead nav a {
-	color: #1d1d1d;
-}
-
 #masthead nav ul {
 	list-style: none;
 	margin: 0;
@@ -940,6 +936,7 @@ a.custom-logo-link:hover {
 	background-color: #f8f8f8;
 }
 
+main.content,
 article.content footer.contentable {
 	margin-bottom: 7em;
 }
@@ -949,6 +946,10 @@ article header h2 {
 	font-size: 28px;
 	line-height: 42px;
 	margin: 0 0 .2em 0;
+}
+
+.post-content a {
+	color: #3d7e9a;
 }
 
 .post-cat {
