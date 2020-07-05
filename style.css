@@ -465,7 +465,7 @@ dfn, cite, em, i {
 	font-style: italic;
 }
 
-pre {
+pre:not(.wp-block-code) {
 	font-size: 24px;
 	line-height: 36px;
 	color: #9e9e9e;
@@ -476,7 +476,7 @@ pre {
 	white-space: normal;
 }
 
-pre::after {
+pre:not(.wp-block-code)::after {
 	position: absolute;
 	content: "";
 	height: 4px;
@@ -484,6 +484,18 @@ pre::after {
 	background-color: #d8d8d8;
 	left: 0;
 	bottom: 0;
+}
+
+pre.wp-block-code,
+code {
+	background-color: #efefef;
+	padding: .3em;
+}
+
+pre.wp-block-code {
+	padding: 1em 1.5em;
+	margin: 2em 0 3em 0;
+	box-shadow: 2px 2px 5px 0px #ccc;
 }
 
 blockquote p {
@@ -556,10 +568,11 @@ hr {
 ul {
 	list-style: disc;
 	margin-bottom: 1.5em;
+	padding-left: 1.5em;
 }
 
-ul {
-	padding-left: 1.5em;
+ul li {
+	margin-bottom: .5em;
 }
 
 ol {
@@ -588,6 +601,7 @@ img {
 figure {
 	margin: 1em 0;
 	max-width: 100%;
+	text-align: center;
 }
 
 figcaption {
@@ -715,7 +729,7 @@ label::after {
 # Links
 --------------------------------------------------------------*/
 a {
-	color: #1d1d1d;
+	color: #3d7e9a;
 	text-decoration: none;
 }
 
@@ -729,6 +743,7 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
+	text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -871,6 +886,10 @@ object {
 	white-space: nowrap;
 }
 
+#masthead nav a {
+	color: #1d1d1d;
+}
+
 #masthead nav ul {
 	list-style: none;
 	margin: 0;
@@ -919,6 +938,10 @@ a.custom-logo-link:hover {
 
 #primary article:nth-child(even) {
 	background-color: #f8f8f8;
+}
+
+article.content footer.contentable {
+	margin-bottom: 7em;
 }
 
 article header h1,
@@ -971,10 +994,15 @@ article header h2 {
 }
 
 footer#colophon {
-	max-width: 99em;
-	margin: 3em auto;
-	padding: 0 1em;
+	background-color: #1d1d1d;
+	color: #d8d8d8;
+	width: 100%;
+	padding: 3em;
 	font-size: .85em;
+}
+
+footer#colophon a {
+	color: #d8d8d8;
 }
 
 .copyright {

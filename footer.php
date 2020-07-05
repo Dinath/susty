@@ -32,7 +32,7 @@ $has_sidebar_3 = is_active_sidebar( 'sidebar-footer-3' );
 		</div>
 		<?php endif; ?>
 
-		<p class="copyright">&copy; <?php bloginfo( 'name' ); ?></p>
+		<p class="copyright">&copy; 2020 - <?php bloginfo( 'name' ); ?></p>
 
 	</footer>
 
