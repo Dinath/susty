@@ -457,13 +457,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Noto Serif", serif;
 }
 
-
-@media (min-width: 782px) {
-	.post-inner {
-		font-size: 20px;
-	}
-}
-
 p {
 	margin-bottom: 1.5em;
 }
@@ -738,6 +731,10 @@ label::after {
 	text-decoration: underline;
 }
 
+.breadcrumbs a {
+	text-transform: capitalize;
+}
+
 /*--------------------------------------------------------------
 # Links
 --------------------------------------------------------------*/
@@ -907,15 +904,12 @@ object {
 
 #masthead nav ul li {
 	display: inline-block;
-	margin: 1em;
+	margin: 0;
 }
 
-#masthead nav ul li:first-child {
-	margin-left: 2em;
-}
-
-#masthead nav ul li:last-child {
-	margin-right: 2em;
+#masthead nav ul li a {
+	padding: 1em;
+	display: inline-block;
 }
 
 .site-title {
@@ -972,6 +966,7 @@ article header h2 {
 	font-size: 13px;
 	margin: .5em 0;
 	display: inline-block;
+	text-transform: capitalize;
 }
 
 .cat-links {
