@@ -873,12 +873,12 @@ object {
 --------------------------------------------------------------*/
 #masthead {
 	text-align: center;
-	background-color: #f8f8f8;
 }
 
 .menu-container nav {
 	overflow: auto;
 	white-space: nowrap;
+	background-color: #4A148C;
 }
 
 .menu-container nav ul {
@@ -896,6 +896,7 @@ object {
 	padding: 1em;
 	display: inline-block;
 	vertical-align: middle;
+	color: #efefef;
 }
 
 .menu-container nav ul li a[href^="https://school.alexsoyes.com"] {
@@ -999,11 +1000,11 @@ article header h2 {
 }
 
 footer#colophon {
-	background-color: #1d1d1d;
-	color: #d8d8d8;
+	background-color: #4A148C;
+	color: #fff;
 	width: 100%;
 	padding: 3em;
-	font-size: .85em;
+	font-size: .9em;
 	text-align: center;
 }
 
@@ -1066,22 +1067,27 @@ footer#colophon a {
 	white-space: nowrap;
 }
 
-.mc-field-group input {
-	display: block;
-	font-size: 16px;
-	width: 100%;
+@media (max-width: 727px) {
+	.mc-field-group input {
+		display: block;
+		font-size: 16px;
+		width: 100%;
+	}
+
+	.mc-field-group input[type="button"] {
+		margin-top: 2rem;
+	}
 }
 
-@media (min-width: 1024px) {
-	.mc-field-group input {
-		display: inline-block;
-		width: auto;
-	}
+@media (min-width: 728px) {
 	.mc-field-group input[type="email"] {
 		width: 70%;
 	}
 	.mc-field-group input[type="button"] {
 		width: 30%;
+	}
+	.mc-field-group input {
+		display: inline-block;
 	}
 }
 
