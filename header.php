@@ -48,9 +48,6 @@
 			<?php
 		endif;
 		?>
-
-		<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
-
 		<?php
 		if ( has_nav_menu( 'menu-1' ) ) :
 			?>
