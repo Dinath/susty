@@ -7,6 +7,9 @@
  * @package Susty
  */
 
+require get_template_directory() . '/classes/class-susty-svg-icons.php';
+require get_template_directory() . '/inc/icon-functions.php';
+
 if ( ! function_exists( 'susty_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.

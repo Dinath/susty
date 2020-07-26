@@ -910,6 +910,11 @@ object {
 #masthead nav ul li a {
 	padding: 1em;
 	display: inline-block;
+	vertical-align: middle;
+}
+
+#masthead nav ul li a[href^="https://school.alexsoyes.com"] {
+	font-weight: bold;
 }
 
 .site-title {
