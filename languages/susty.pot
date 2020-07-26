@@ -161,7 +161,3 @@ msgstr ""
 #: functions.php:182
 msgid "Widgets in this area will be displayed in columns."
 msgstr ""
-
-#: front-page.php:31
-msgid "All posts."
-msgstr ""

@@ -25,13 +25,7 @@ get_header();
 		endwhile;
 		?>
 		<?php
-		if ( is_front_page() && ! is_home() ) :
-			?>
-			<div class="aligncenter">
-				<a href="<?php echo get_post_type_archive_link( 'post' ); ?>" class="button"><?php esc_html_e( 'All posts.', 'susty' ); ?></a>
-			</div>
-			<?php
-		else :
+		if ( ! is_front_page() && is_home() ) :
 			get_template_part( 'template-parts/pagination' );
 		endif;
 		?>
