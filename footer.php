@@ -7,34 +7,41 @@
  * @package Susty
  */
 
-
-$has_sidebar_1 = is_active_sidebar( 'sidebar-footer-1' );
-$has_sidebar_2 = is_active_sidebar( 'sidebar-footer-2' );
-$has_sidebar_3 = is_active_sidebar( 'sidebar-footer-3' );
 ?>
-	</div><!-- #content -->
+</div><!-- #content -->
 
-	<footer id="colophon">
+<footer id="colophon">
 
-		<?php if ( $has_sidebar_1 || $has_sidebar_2 || $has_sidebar_3 ) : ?>
-		<div class="wp-block-columns">
-			<?php if ( $has_sidebar_1 ) : ?>
-            <div class="wp-block-column"><?php dynamic_sidebar( 'sidebar-footer-1' ); ?></div>
-			<?php endif; ?>
+    <div class="last-text">
+        <p class="h1">¯\_(ツ)_/¯</p>
+        <p>On est responsable de notre propre avenir !<br>
+            <strong>Deviens un meilleur développeur dès aujourd'hui.</strong>
+        </p>
+		<?php get_template_part( 'template-parts/newsletter' ); ?>
+    </div>
 
-			<?php if ( $has_sidebar_2 ) : ?>
-			<div class="wp-block-column"><?php dynamic_sidebar( 'sidebar-footer-2' ); ?></div>
-			<?php endif; ?>
+    <div class="menu-container">
+		<?php
+		if ( has_nav_menu( 'menu-1' ) ) :
+			?>
+            <nav>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'footer-menu',
+					)
+				);
+				?>
+            </nav>
+		<?php
+		endif;
+		?>
+    </div>
 
-			<?php if ( $has_sidebar_3 ) : ?>
-			<div class="wp-block-column"><?php dynamic_sidebar( 'sidebar-footer-3' ); ?></div>
-			<?php endif; ?>
-		</div>
-		<?php endif; ?>
+    <small class="copyright">&copy; 2020 - <?php bloginfo( 'name' ); ?></small>
 
-		<p class="copyright">&copy; 2020 - <?php bloginfo( 'name' ); ?></p>
-
-	</footer>
+</footer>
 
 </div><!-- #page -->
 

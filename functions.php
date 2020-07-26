@@ -118,11 +118,17 @@ add_action( 'after_setup_theme', 'susty_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function susty_scripts() {
-	wp_enqueue_style( 'susty-style', get_stylesheet_uri() );
+	$theme_version = wp_get_theme()->get( 'Version' );
+
+	wp_enqueue_style( 'susty-style', get_stylesheet_uri(), array(), $theme_version );
+	wp_enqueue_script( 'susty-js', get_template_directory_uri() . '/assets/js/susty.js', array(), $theme_version, true );
+
+	wp_script_add_data( 'susty-js', 'async', true );
 
 	wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_enqueue_scripts', 'susty_scripts' );
+
 
 /**
  * Custom template tags for this theme.
@@ -163,29 +169,3 @@ function susty_remove_wp_block_library_css() {
 	wp_dequeue_style( 'wp-block-library-theme' );
 }
 add_action( 'wp_enqueue_scripts', 'susty_remove_wp_block_library_css' );
-
-function susty_sidebar_registration() {
-
-	// Arguments used in all register_sidebar() calls.
-	$shared_args = array(
-		'before_title'  => '<p>',
-		'after_title'   => '</p>',
-		'before_widget' => '<div class="%2$s">',
-		'after_widget'  => '</div>',
-	);
-
-	for ( $i = 1; $i <= 3; $i ++ ) {
-		register_sidebar(
-			array_merge(
-				$shared_args,
-				array(
-					'name'        => __( 'Footer', 'susty' ) . " $i",
-					'id'          => 'sidebar-footer-' . $i,
-					'description' => __( 'Widgets in this area will be displayed in columns.', 'susty' ),
-				)
-			)
-		);
-	}
-}
-
-add_action( 'widgets_init', 'susty_sidebar_registration' );

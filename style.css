@@ -395,57 +395,59 @@ select,
 optgroup,
 textarea {
 	color: #1d1d1d;
-	font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
 	font-size: 16px;
 	line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
-	font-family: "Noto Serif", serif;
+.h1 {
+	font-size: 4em;
 	font-weight: 900;
-}
-
-.post-inner h2,
-.post-inner h3,
-.post-inner h4,
-.post-inner h5,
-.post-inner h6 {
-	line-height: 1.4;
 	font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.4;
+	font-weight: 900;
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
+}
+
 @media (min-width: 782px) {
-	.post-inner h2,
-	.post-inner h3,
-	.post-inner h4,
-	.post-inner h5,
-	.post-inner h6 {
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		width: 80%;
 	}
 }
 
-.post-inner h2 {
+h2 {
 	font-size: 1.6em;
 }
 
-.post-inner h3 {
+h3 {
 	font-size: 1.4em;
 	margin-top: 2em;
 }
 
-.post-inner h4 {
+h4 {
 	font-size: 1.2em;
 }
 
 @media (min-width: 782px) {
-	.post-inner h2 {
+	h2 {
 		font-size: 1.8em;
 	}
-	.post-inner h3 {
+	h3 {
 		font-size: 1.5em;
 	}
-	.post-inner h4 {
+	h4 {
 		font-size: 1.3em;
 	}
 }
@@ -622,7 +624,7 @@ table {
 }
 
 em {
-	background-color: #feecde;
+	background-color: #f8f8f8;
 	padding: 4px 6px;
 }
 
@@ -634,8 +636,9 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: none;
-	color: #1d1d1d;
-	background-color: #feecde;
+	color: #FFF;
+	background-color: #FF8A65;
+	transition: 1s all;
 	border-radius: 3px;
 	font-size: 15px;
 	line-height: 1;
@@ -672,29 +675,11 @@ textarea {
 	border-radius: 5px;
 	padding: 10px;
 	width: 100%;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="range"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-	outline-color: #feecde;
+	box-shadow: none;
 }
 
 select {
-	border: 1px solid #feecde;
+	border: 1px solid #f8f8f8;
 }
 
 textarea {
@@ -708,12 +693,12 @@ label {
 	display: inline-block;
 }
 
-.post-inner h2 {
+h2 {
 	position: relative;
 	margin-top: 3em;
 }
 
-.post-inner h2::after,
+h2::after,
 label::after {
 	z-index: -10;
 	left: 0;
@@ -723,7 +708,7 @@ label::after {
 	display: inline-block;
 	width: 2em;
 	height: .5em;
-	background-color: #feecde;
+	background-color: #f8f8f8;
 }
 
 .breadcrumbs a,
@@ -888,45 +873,50 @@ object {
 --------------------------------------------------------------*/
 #masthead {
 	text-align: center;
+	background-color: #f8f8f8;
 }
 
-#masthead nav {
-	background-color: #feecde;
+.menu-container nav {
 	overflow: auto;
 	white-space: nowrap;
 }
 
-#masthead nav ul {
+.menu-container nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-#masthead nav ul li {
+.menu-container nav ul li {
 	display: inline-block;
 	margin: 0;
 }
 
-#masthead nav ul li a {
+.menu-container nav ul li a {
 	padding: 1em;
 	display: inline-block;
 	vertical-align: middle;
 }
 
-#masthead nav ul li a[href^="https://school.alexsoyes.com"] {
+.menu-container nav ul li a[href^="https://school.alexsoyes.com"] {
 	font-weight: bold;
 }
 
 .site-title {
 	font-size: 2em;
 	margin: 0;
+	line-height: 0;
 }
 
 .site-description {
 	margin: 0 0 10px 0;
 }
 
-a.custom-logo-link:hover {
+.custom-logo-link {
+	display: inline-block;
+}
+
+.custom-logo-link:hover {
 	border: none;
 }
 
@@ -935,9 +925,10 @@ a.custom-logo-link:hover {
 --------------------------------------------------------------*/
 .contentable,
 #content {
-	max-width: 40em;
+	max-width: 782px;
 	margin: 0 auto;
 	padding: 0 2em;
+	box-sizing: border-box;
 }
 
 .search #primary article {
@@ -1013,6 +1004,22 @@ footer#colophon {
 	width: 100%;
 	padding: 3em;
 	font-size: .85em;
+	text-align: center;
+}
+
+@media (min-width: 1024px) {
+	footer .last-text {
+		width: 40em;
+	}
+}
+
+footer .copyright {
+	margin-top: 2em;
+	display: inline-block;
+}
+
+footer .last-text {
+	margin: 0px auto 5em auto;
 }
 
 footer#colophon a {
@@ -1039,7 +1046,7 @@ footer#colophon a {
 
 .pagination .current {
 	color: #1d1d1d;
-	background-color: #feecde;
+	background-color: #f8f8f8;
 }
 
 .pagination .page-numbers {
@@ -1049,4 +1056,53 @@ footer#colophon a {
 .pagination .prev,
 .pagination .next {
 	font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+## Mailchimp
+--------------------------------------------------------------*/
+
+.mc-signup-form {
+	white-space: nowrap;
+}
+
+.mc-field-group input {
+	display: block;
+	font-size: 16px;
+	width: 100%;
+}
+
+@media (min-width: 1024px) {
+	.mc-field-group input {
+		display: inline-block;
+		width: auto;
+	}
+	.mc-field-group input[type="email"] {
+		width: 70%;
+	}
+	.mc-field-group input[type="button"] {
+		width: 30%;
+	}
+}
+
+/*--------------------------------------------------------------
+## Catégories
+--------------------------------------------------------------*/
+
+.wp-block-categories {
+	padding: 0;
+}
+
+.wp-block-categories .cat-item {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0 1rem 1rem 0;
+}
+
+.wp-block-categories .cat-item a {
+	padding: 1rem;
+	color: #FFF;
+	background-color: #FF8A65;
+	display: inline-block;
 }
