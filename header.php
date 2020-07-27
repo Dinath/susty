@@ -51,7 +51,7 @@
 		<?php
 		if ( has_nav_menu( 'menu-1' ) ) :
 			?>
-			<nav>
+			<nav id="navigation">
 			<?php
 			wp_nav_menu(
 				array(

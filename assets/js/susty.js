@@ -5,7 +5,7 @@
 WebFontConfig = {
 	google: { families: [
 	        'Roboto:900:latin',
-	        'Roboto+Slab:400,700:latin',
+	        'Roboto+Slab:300,700:latin',
         ]
 	}
 };

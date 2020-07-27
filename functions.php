@@ -49,6 +49,8 @@ if ( ! function_exists( 'susty_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'susty' ),
+				'menu-2' => esc_html__( 'Secondary', 'susty' ),
+				'menu-3' => esc_html__( 'Social', 'susty' ),
 			)
 		);
 

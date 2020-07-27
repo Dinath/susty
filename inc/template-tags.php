@@ -139,7 +139,7 @@ if ( ! function_exists( 'susty_wp_post_category' ) ) :
 		$categories = get_the_category( get_the_ID() );
 
 		if ( ! empty( $categories ) ) {
-			printf( '<small class="post-cat">%s</small>', $categories[0]->name );
+			printf( '<span class="post-cat">%s</span>', $categories[0]->name );
 		}
 	}
 endif;

@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('content post-content'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'content post-content' ); ?>>
 
 	<header>
 		<div class="contentable">
@@ -25,7 +25,7 @@
 		endif;
 		the_title( '<h1>', '</h1>' );
 		susty_wp_post_category();
-		the_excerpt();
+		printf( '<div class="post-excerpt">%s</div>', get_the_excerpt() );
 		if ( ! is_archive() ) {
 			get_template_part( 'entry-parts/breadcrumb' );
 		}
