@@ -2,17 +2,10 @@
  * SustyJS
  */
 
-WebFontConfig = {
-	google: { families: [
-	        'Roboto:900:latin',
-	        'Roboto+Slab:300,700:latin',
-        ]
-	}
-};
-
 (function(d) {
-	var wf   = d.createElement( 'script' ), s = d.scripts[0];
-	wf.src   = '/wp-content/themes/susty/assets/js/webfontloader.js?ver=1.6.28';
-	wf.async = true;
-	s.parentNode.insertBefore( wf, s );
+	var link = document.createElement('link');
+	link.id = 'gfonts';
+	link.rel = 'stylesheet';
+	link.href = 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&family=Roboto:wght@900&display=swap';
+	document.head.appendChild(link);
 })( document );
