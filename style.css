@@ -820,7 +820,6 @@ a:hover, a:active {
 #comments {
 	background-color: #f8f8f8;
 	padding: 2em 0;
-	margin-top: 4em;
 }
 
 #comments label {
@@ -1138,6 +1137,31 @@ footer#colophon a {
 	height: auto;
 }
 
+
+/*--------------------------------------------------------------
+## Sharable content
+--------------------------------------------------------------*/
+.sharable.socials {
+	background-color: #FF8A65;
+	color: #FFF;
+	margin-top: 6em;
+	padding: 4em 0 8em 0;
+}
+
+.sharable h3 {
+	font-size: 2em;
+	margin-bottom: .5em;
+	font-family: "Roboto Slab", "Noto Serif", serif;
+}
+
+.sharable .socials button {
+	background-color: #FFF;
+	color: #1d1d1d;
+	padding: .5em 2em;
+}
+.sharable .socials button > * {
+	vertical-align: middle;
+}
 
 .socials {
 	margin-top: 2em;
