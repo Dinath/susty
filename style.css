@@ -1173,3 +1173,14 @@ footer#colophon a {
 	border:none;
 	margin-right: 1em;
 }
+
+@media (max-width: 727px) {
+	.sharable .socials {
+		text-align: center;
+	}
+
+	.sharable .socials button {
+		width: 70%;
+		margin: 2em auto 0 auto;
+	}
+}

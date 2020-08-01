@@ -73,8 +73,8 @@ $shareFacebook = "https://www.facebook.com/v3.3/dialog/share?app_id=993736991064
 
 	<footer class="sharable socials">
         <div class="contentable">
-            <h3>Tu as aimé cet article ?</h3>
-            <p>J'ai mis un moment à l'écrire... Ce serait top si tu pouvais le partager à la communauté :)</p>
+            <h3>❤️ Tu as aimé cet article ?️</h3>
+            <p>J'ai mis un moment à l'écrire... Ce serait top si tu pouvais le partager à la communauté !</p>
             <div class="socials">
                 <button data-tab="<?php echo $shareTwitter; ?>"><?php echo $svgTwitter; ?> Twitter</button>
                 <button data-tab="<?php echo $shareFacebook; ?>"><?php echo $svgFacebook; ?> Facebook</button>
