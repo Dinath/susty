@@ -868,6 +868,8 @@ object {
 
 .menu-container nav {
 	background-color: #4A148C;
+	overflow: auto;
+	white-space: nowrap;
 }
 
 .menu-container nav ul {
