@@ -26,3 +26,12 @@ function popupwindow(url, title, w, h) {
 	var top = (screen.height/2)-(h/2);
 	return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
 }
+
+var windowTabs = document.querySelectorAll("[data-tab]");
+for (var link of windowLinks) {
+	var URI = link.dataset.tab;
+
+	link.onclick = function() {
+		windo.open(URI);
+	};
+}

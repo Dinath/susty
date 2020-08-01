@@ -259,6 +259,7 @@ button:-moz-focusring,
 	outline: 1px dotted ButtonText;
 }
 
+
 /**
  * Correct the padding in Firefox.
  */
@@ -1133,4 +1134,16 @@ footer#colophon a {
 	max-width: none;
 	line-height: 1;
 	height: auto;
+}
+
+
+.socials {
+	margin-top: 2em;
+}
+
+.socials button {
+	background-color: transparent;
+	padding: 0;
+	border:none;
+	margin-right: 1em;
 }
