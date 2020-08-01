@@ -9,14 +9,14 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'content' ); ?>>
 
 	<div class="contentable">
 
 		<header>
 			<?php the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
-			<?php susty_wp_post_category(); ?>
-		</header><!-- .entry-header -->
+            <?php susty_wp_post_category(); ?>
+        </header><!-- .entry-header -->
 
 		<div>
 			<?php
@@ -33,6 +33,7 @@
 
 		<?php if ( get_edit_post_link() ) : ?>
 			<footer>
+                <small class="entry-meta"><?php susty_wp_posted_on(); ?></small><!-- .entry-meta -->
 				<?php
 				edit_post_link(
 					sprintf(

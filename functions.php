@@ -92,7 +92,7 @@ if ( ! function_exists( 'susty_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'width'       => 150,
+				'width'       => 300,
 				'flex-width'  => false,
 				'flex-height' => true,
 			)

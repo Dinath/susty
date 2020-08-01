@@ -9,7 +9,6 @@
 
 get_header();
 ?>
-
 	<div id="primary">
 		<main id="main">
 

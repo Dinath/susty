@@ -394,7 +394,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #1d1d1d;
+	color: #292929;
 	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
 	font-size: 16px;
 	line-height: 1.6;
@@ -695,8 +695,9 @@ h2 {
 	text-decoration: underline;
 }
 
-.post-inner a {
-	font-weight: bold;
+.breadcrumbs {
+	padding: 1.5em 0;
+	margin-top: 0;
 }
 
 .breadcrumbs a {
@@ -856,12 +857,12 @@ object {
 --------------------------------------------------------------*/
 #masthead {
 	text-align: center;
+	padding-top: .5em;
 }
 
-#navigation {
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
+.menu-container a[aria-current="location"] {
+	color:#FF8A65;
+	font-weight: bold;
 }
 
 .menu-container nav {
@@ -941,6 +942,7 @@ article header h2 {
 
 .post-content a {
 	color: #3d7e9a;
+	font-weight: 400;
 }
 
 .posted-on {
@@ -987,8 +989,12 @@ article header h2 {
 .single article > header {
 	box-sizing: content-box;
 	background-color: #f8f8f8;
-	padding: 5em 0 3em 0;
+	padding: 0 0 5em 0;
 	margin-bottom: 2em;
+}
+
+.single article .post-excerpt {
+	padding-top: 1em;
 }
 
 footer#colophon {
@@ -1103,6 +1109,28 @@ footer#colophon a {
 	color: #FFF;
 	background-color: #FF8A65;
 	display: inline-block;
-	border-radius: .5em;
+	border-radius: 3px;
 	font-weight: 700;
+	text-transform: capitalize;
+}
+
+/*--------------------------------------------------------------
+## Utilities from Gutenberg
+--------------------------------------------------------------*/
+.is-style-dots::before {
+	content: "\00b7 \00b7 \00b7";
+	color: currentColor;
+	font-size: 20px;
+	letter-spacing: 2em;
+	padding-left: 2em;
+	font-family: serif;
+}
+
+.wp-block-separator {
+	background: none !important;
+	border: none;
+	text-align: center;
+	max-width: none;
+	line-height: 1;
+	height: auto;
 }
