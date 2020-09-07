@@ -420,6 +420,9 @@ h6 {
 
 h2 {
 	font-size: 1.6em;
+	position: relative;
+	padding-top: 2em;
+	margin-top: 1em;
 }
 
 h3 {
@@ -573,7 +576,7 @@ ul {
 }
 
 ul li {
-	margin-bottom: .5em;
+	margin-bottom: .3em;
 }
 
 ol {
@@ -684,11 +687,6 @@ label {
 	position: relative;
 	margin-bottom: .5em;
 	display: inline-block;
-}
-
-h2 {
-	position: relative;
-	margin-top: 3em;
 }
 
 .breadcrumbs a,
@@ -995,7 +993,7 @@ article header h2 {
 .single article > header {
 	box-sizing: content-box;
 	background-color: #f8f8f8;
-	padding: 5em;
+	padding: 5em 0;
 	margin-bottom: 2em;
 }
 
