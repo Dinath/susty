@@ -13,10 +13,11 @@
 
 	<div class="contentable">
 
-		<header>
-			<?php the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+        <header>
+            <small class="entry-meta"><?php susty_wp_posted_on(); ?></small>
+            <?php the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
             <?php susty_wp_post_category(); ?>
-        </header><!-- .entry-header -->
+        </header>
 
 		<div>
 			<?php
@@ -30,30 +31,6 @@
 			);
 			?>
 		</div>
-
-		<?php if ( get_edit_post_link() ) : ?>
-			<footer>
-                <small class="entry-meta"><?php susty_wp_posted_on(); ?></small><!-- .entry-meta -->
-				<?php
-				edit_post_link(
-					sprintf(
-						wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'susty' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-				?>
-			</footer>
-		<?php endif; ?>
 
 	</div><!-- .contentable -->
 

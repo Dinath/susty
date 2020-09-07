@@ -21,29 +21,29 @@ $shareFacebook = "https://www.facebook.com/v3.3/dialog/share?app_id=993736991064
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'content post-content' ); ?>>
 
-	<header>
-		<div class="contentable">
+    <header>
+        <div class="contentable">
 			<?php
 			get_template_part( 'entry-parts/breadcrumb' );
 			?>
-			<div class="entry-meta">
+            <div class="entry-meta">
 				<?php
 				susty_wp_posted_on();
 				?>
-			</div><!-- .entry-meta -->
+            </div><!-- .entry-meta -->
 			<?php
 			the_title( '<h1>', '</h1>' );
 			printf( '<div class="post-excerpt">%s</div>', get_the_excerpt() );
 			?>
-			<div class="socials">
+            <div class="socials">
                 <button data-tab="<?php echo $shareTwitter; ?>"><?php echo $svgTwitter; ?></button>
                 <button data-tab="<?php echo $shareFacebook; ?>"><?php echo $svgFacebook; ?></button>
                 <button data-window="<?php echo $shareLinkedIn; ?>"><?php echo $svgLinkedIn; ?></button>
             </div>
-		</div>
-	</header>
+        </div>
+    </header>
 
-	<div id="content" class="post-inner">
+    <div id="content" class="post-inner">
 		<?php
 		if ( ! is_archive() ) {
 			the_content(
@@ -69,9 +69,9 @@ $shareFacebook = "https://www.facebook.com/v3.3/dialog/share?app_id=993736991064
 			)
 		);
 		?>
-	</div>
+    </div>
 
-	<footer class="sharable socials">
+    <footer class="sharable socials">
         <div class="contentable">
             <h3>❤️ Tu as aimé cet article ?️</h3>
             <p>J'ai mis un moment à l'écrire... Ce serait top si tu pouvais le partager à la communauté !</p>
@@ -81,5 +81,5 @@ $shareFacebook = "https://www.facebook.com/v3.3/dialog/share?app_id=993736991064
                 <button data-window="<?php echo $shareLinkedIn; ?>"><?php echo $svgLinkedIn; ?> LinkedIn</button>
             </div>
         </div>
-	</footer>
+    </footer>
 </article><!-- #post-<?php the_ID(); ?> -->

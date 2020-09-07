@@ -31,7 +31,7 @@ if ( ! function_exists( 'susty_wp_posted_on' ) ) :
             $time_string
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+		echo '<div class="posted-on">' . $posted_on . '</div>'; // WPCS: XSS OK.
 
 	}
 endif;

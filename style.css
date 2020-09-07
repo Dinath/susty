@@ -942,6 +942,10 @@ article header h2 {
 	margin: 0 0 .2em 0;
 }
 
+article header h2 {
+	font-size: 30px;
+}
+
 .post-content a {
 	color: #3d7e9a;
 	font-weight: 400;
@@ -991,7 +995,7 @@ article header h2 {
 .single article > header {
 	box-sizing: content-box;
 	background-color: #f8f8f8;
-	padding: 0 0 5em 0;
+	padding: 5em;
 	margin-bottom: 2em;
 }
 
