@@ -4,7 +4,7 @@ Theme URI: https://sustywp.com
 Author: Jack Lenox
 Author URI: https://blog.jacklenox.com
 Description: A theme for WordPress focused on performance and sustainability.
-Version: 1.1.4
+Version: 1.1.5
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: susty
@@ -421,8 +421,11 @@ h6 {
 h2 {
 	font-size: 26px;
 	position: relative;
-	padding-top: 2em;
 	margin-top: 1em;
+}
+
+.single h2 {
+	padding-top: 2em;
 }
 
 h3 {
@@ -452,10 +455,6 @@ h4 {
 	font-size: 18px;
 	letter-spacing: -0.003em;
 	font-family: "Merriweather", "Noto Serif", serif;
-}
-
-.post-inner em {
-	line-height: -6px;
 }
 
 p {
@@ -699,7 +698,7 @@ label {
 }
 
 .breadcrumbs {
-	padding: 1.5em 0;
+	padding-bottom: 1em;
 	margin-top: 0;
 }
 
@@ -920,7 +919,7 @@ object {
 #content {
 	max-width: 782px;
 	margin: 0 auto;
-	padding: 0 1em;
+	padding: 0 1.5em;
 	box-sizing: border-box;
 }
 
@@ -944,14 +943,12 @@ article header h2 {
 	margin: 0 0 .2em 0;
 }
 
-article header h2 {
-	font-size: 30px;
-}
-
 @media (min-width: 782px) {
-	article header h1,
-	article header h2 {
+	article header h1 {
 		font-size: 36px;
+	}
+	article header h2 {
+		font-size: 30px;
 	}
 }
 
@@ -1005,7 +1002,7 @@ article header h2 {
 	box-sizing: content-box;
 	background-color: #f8f8f8;
 	padding: 5em 0;
-	margin-bottom: 2em;
+	margin-bottom: 4em;
 }
 
 .single article .post-excerpt {
@@ -1196,4 +1193,21 @@ footer#colophon a {
 		width: 70%;
 		margin: 2em auto 0 auto;
 	}
+}
+
+/** homepage **/
+
+.wp-block-latest-posts {
+	padding: 0;
+	list-style: none;
+}
+
+.wp-block-latest-posts li {
+	margin-bottom: 2em;
+}
+
+.wp-block-latest-posts time {
+	display: block;
+	font-size: 80%;
+	color: #292929;
 }
