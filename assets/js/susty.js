@@ -6,12 +6,12 @@
 	var link  = document.createElement( 'link' );
 	link.id   = 'gfonts';
 	link.rel  = 'stylesheet';
-	link.href = 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@900&display=swap';
+	link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Merriweather:wght@400;700&display=swap';
 	document.head.appendChild( link );
 })( document );
 
 /**
- * Open in a new Window.
+ * Open in a new Window
  *
  * @type {NodeListOf<Element>}
  */
