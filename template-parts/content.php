@@ -32,9 +32,7 @@
                     ?>
                 </div><!-- .entry-meta -->
                 <?php the_title( '<h1>', '</h1>' ); ?>
-                <small class="entry-time">
-                    <?php the_content_time_to_read() ?>
-                </small>
+                <?php the_content_time_to_read(); ?>
                 <?php printf( '<div class="post-excerpt">%s</div>', get_the_excerpt() ); ?>
                 <div class="socials">
                     <button data-tab="<?php echo $shareTwitter; ?>"><?php echo $svgTwitter; ?></button>

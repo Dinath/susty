@@ -34,9 +34,7 @@
         </div>
 
         <footer>
-            <small class="entry-time">
-		        <?php the_content_time_to_read() ?>
-            </small>
+	        <?php the_content_time_to_read() ?>
         </footer>
 
     </div><!-- .contentable -->

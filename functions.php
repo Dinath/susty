@@ -186,6 +186,11 @@ function isa_count_content_words( $content ) {
 }
 
 function the_content_time_to_read() {
-	$timeToRead = (int) isa_count_content_words( get_the_content() ) / 250;
-	printf("Temps de lecture : %d min", $timeToRead === 0 ? 1 : $timeToRead);
+	$timeToRead = ceil( isa_count_content_words( get_the_content() ) / 250 );
+	?>
+	<small class="entry-time">
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/star.svg" width="15" alt="Temps de lecture">
+		<span>Temps de lecture : <?php echo $timeToRead ?> min.</span>
+	</small>
+	<?php
 }
