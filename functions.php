@@ -194,3 +194,12 @@ function the_content_time_to_read() {
 	</small>
 	<?php
 }
+
+/** * Completely Remove jQuery From WordPress */
+function my_init() {
+	if (!is_admin()) {
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', false);
+	}
+}
+add_action('init', 'my_init');
