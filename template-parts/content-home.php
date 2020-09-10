@@ -11,15 +11,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'content' ); ?>>
 
-	<div class="contentable">
+    <div class="contentable">
 
         <header>
             <small class="entry-meta"><?php susty_wp_posted_on(); ?></small>
-            <?php the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
-            <?php susty_wp_post_category(); ?>
+			<?php the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+			<?php susty_wp_post_category(); ?>
+
         </header>
 
-		<div>
+        <div>
 			<?php
 			the_excerpt();
 
@@ -30,8 +31,14 @@
 				)
 			);
 			?>
-		</div>
+        </div>
 
-	</div><!-- .contentable -->
+        <footer>
+            <small class="entry-time">
+		        <?php the_content_time_to_read() ?>
+            </small>
+        </footer>
+
+    </div><!-- .contentable -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

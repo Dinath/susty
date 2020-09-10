@@ -171,3 +171,21 @@ function susty_remove_wp_block_library_css() {
 	wp_dequeue_style( 'wp-block-library-theme' );
 }
 add_action( 'wp_enqueue_scripts', 'susty_remove_wp_block_library_css' );
+
+/**
+ * Count the number of words in post content
+ * @param string $content The post content
+ * @return integer $count Number of words in the content
+ */
+function isa_count_content_words( $content ) {
+	$decode_content = html_entity_decode( $content );
+	$filter_shortcode = do_shortcode( $decode_content );
+	$strip_tags = wp_strip_all_tags( $filter_shortcode, true );
+
+	return str_word_count( $strip_tags );
+}
+
+function the_content_time_to_read() {
+	$timeToRead = (int) isa_count_content_words( get_the_content() ) / 250;
+	printf("Temps de lecture : %d min", $timeToRead === 0 ? 1 : $timeToRead);
+}

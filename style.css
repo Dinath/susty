@@ -702,8 +702,11 @@ label {
 	margin-top: 0;
 }
 
-.breadcrumbs a {
+.post-content .breadcrumbs a {
+	text-decoration: none;
+	color: #1d1d1d;
 	text-transform: capitalize;
+	font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -957,6 +960,7 @@ article header h2 {
 	color: #3d7e9a;
 	font-weight: 400;
 	transition: 1s all;
+	text-decoration: underline;
 }
 
 .posted-on {
@@ -972,6 +976,23 @@ article header h2 {
 	margin: .6em 0 1em 0;
 	display: inline-block;
 	text-transform: capitalize;
+}
+
+.entry-time {
+	color: #777;
+	font-weight: bold;
+}
+
+.entry-time::before {
+	content: '';
+	background-image: url("/wp-content/themes/susty/assets/img/star.svg");
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0.3rem;
+	background-size: 15px;
+	background-repeat: no-repeat;
 }
 
 .cat-links {
