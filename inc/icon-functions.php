@@ -45,7 +45,7 @@ function susty_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 		$item_output = sprintf(
 			'<a href="%s" target="_blank">%s</a>',
 			$item->url,
-			str_replace( $item_output, '</span>' . $svg, $item_output )
+			$svg
 		);
 	}
 
