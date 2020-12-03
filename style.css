@@ -4,7 +4,7 @@ Theme URI: https://sustywp.com
 Author: Jack Lenox
 Author URI: https://blog.jacklenox.com
 Description: A theme for WordPress focused on performance and sustainability.
-Version: 1.1.10
+Version: 1.1.11
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: susty
@@ -617,6 +617,10 @@ figcaption {
 	color: #9e9e9e;
 }
 
+.wp-block-table {
+	overflow: auto;
+}
+
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
@@ -633,9 +637,9 @@ thead {
 thead th {
 	font-weight: 900;
 	font-size: 17px;
-	padding-bottom: 1em;
-	margin: 10px 20px;
+	padding: 15px;
 	border-bottom: 3px solid black;
+	white-space: nowrap;
 }
 
 tbody td {
