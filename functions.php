@@ -123,8 +123,8 @@ function susty_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_style( 'susty-style', get_stylesheet_uri(), array(), $theme_version );
-	wp_enqueue_script( 'susty-js', get_template_directory_uri() . '/assets/js/susty.js', array(), $theme_version, true );
 
+	wp_enqueue_script( 'susty-js', get_template_directory_uri() . '/assets/js/susty.js', array(), $theme_version, true );
 	wp_script_add_data( 'susty-js', 'async', true );
 
 	wp_deregister_script( 'wp-embed' );

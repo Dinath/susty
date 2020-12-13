@@ -13,8 +13,11 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="preconnect" href="https://www.google-analytics.com">
-	<link rel="preconnect" href="https://www.googletagmanager.com">
+	<link rel="prefetch" href="https://www.google-analytics.com/analytics.js" as="script" crossorigin>
+	<link rel="prefetch" href="https://www.googletagmanager.com/gtag/js?id=UA-165345162-1" as="script" crossorigin>
+    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/inter-v2-latin-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/merriweather-v22-latin-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/merriweather-v22-latin-700.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 	<?php wp_head(); ?>
 </head>
 
